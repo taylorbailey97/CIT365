@@ -1,0 +1,13 @@
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\obj\Debug\MegaDesk-3-TaylorBailey.csprojAssemblyReference.cache
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\obj\Debug\MegaDesk_3_TaylorBailey.AddQuote.resources
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\obj\Debug\MegaDesk_3_TaylorBailey.MegaDesk.resources
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\obj\Debug\MegaDesk_3_TaylorBailey.Properties.Resources.resources
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\obj\Debug\MegaDesk_3_TaylorBailey.SearchQuotes.resources
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\obj\Debug\MegaDesk_3_TaylorBailey.ViewAllQuotes.resources
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\obj\Debug\MegaDesk-3-TaylorBailey.csproj.GenerateResource.cache
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\obj\Debug\MegaDesk-3-TaylorBailey.csproj.CoreCompileInputs.cache
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\bin\Debug\MegaDesk-3-TaylorBailey.exe.config
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\bin\Debug\MegaDesk-3-TaylorBailey.exe
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\bin\Debug\MegaDesk-3-TaylorBailey.pdb
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\obj\Debug\MegaDesk-3-TaylorBailey.exe
+C:\Users\taylo\source\repos\MegaDesk-3-TaylorBailey\MegaDesk-3-TaylorBailey\obj\Debug\MegaDesk-3-TaylorBailey.pdb
