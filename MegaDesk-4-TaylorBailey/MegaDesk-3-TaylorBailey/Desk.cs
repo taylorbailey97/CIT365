@@ -7,35 +7,44 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_3_TaylorBailey
 {
+    public enum Materials
+    {
+        Select = 0,
+        Oak = 200,
+        Laminate = 100,
+        Pine = 50,
+        Rosewood = 300,
+        Veneer = 125
+    };
+
     public class Desk
     {
-        private int width, depth, height, drawer, material;
+        private int width, depth, drawer, days;
+        private Materials materials;
 
         public Desk()
         {
+            days = 0;
             width = 0;
             depth = 0;
-            height = 0;
             drawer = 0;
-            material = 0;
+            materials = Materials.Select;
         }
 
-        public enum Materials {
-            Oak = 200,
-            Laminate = 100,
-            Pine = 50,
-            Rosewood = 300,
-            Veneer = 125
-        };
 
         public void setDrawers(int drawers)
         {
             this.drawer = drawers;
         }
 
-        public void setMaterial(int material)
+        public void setDays(int days)
         {
-            this.material = material;
+            this.days = days;
+        } 
+
+        public void setMaterial(Materials material)
+        {
+            this.materials = material;
         }
 
         public void setWidth(int width)
@@ -43,14 +52,6 @@ namespace MegaDesk_3_TaylorBailey
             if (width > 0 && width < 100)
             {
                 this.width = width;
-            }
-        }
-
-        public void setHeight(int height)
-        {
-            if (height > 0 && height < 50)
-            {
-                this.height = height;
             }
         }
 
@@ -72,9 +73,9 @@ namespace MegaDesk_3_TaylorBailey
             return this.width;
         }
 
-        public int getHeight()
+        public int getDays()
         {
-            return this.height;
+            return this.days;
         }
 }
 }

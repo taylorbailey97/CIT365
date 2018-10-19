@@ -30,7 +30,6 @@ namespace MegaDesk_3_TaylorBailey
         private void formStart()
         {
             widthLabel.Text = quote.getDesk().getWidth().ToString();
-            heightLabel.Text = quote.getDesk().getHeight().ToString();
             updateCosts();
         }
 
@@ -48,27 +47,6 @@ namespace MegaDesk_3_TaylorBailey
             {
                 addForm.Show();
             }
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            this.quote.calculateAddedCost(true, 3);
-            this.quote.calculateTotal();
-            updateCosts();
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            this.quote.calculateAddedCost(true, 5);
-            this.quote.calculateTotal();
-            updateCosts();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            this.quote.calculateAddedCost(true, 7);
-            this.quote.calculateTotal();
-            updateCosts();
         }
     }
 }

@@ -8,22 +8,20 @@ namespace MegaDesk_3_TaylorBailey
 {
     public class DeskQuote
     {
+        private string custName;
         private Desk desk;
         private double cost, addCost, total;
-        private DateTime created;
+        private DateTime created = DateTime.Now;
 
         public DeskQuote()
         {
-            cost = 0;
-            addCost = 0;
+
         }
 
-        public DeskQuote(Desk desk)
+        public DeskQuote(Desk desk, string name)
         {
-            cost = 0;
-            addCost = 0;
             this.desk = desk;
-            created = DateTime.Now;
+            this.custName = name;
         }
 
         public Desk getDesk()
@@ -65,54 +63,51 @@ namespace MegaDesk_3_TaylorBailey
             this.cost = calculateArea();
         }
 
-        public void calculateAddedCost(bool rushed, int days)
+        public void calculateAddedCost(int days)
         {
-            if (rushed)
+            if (calculateArea() < 1000)
             {
-                if (calculateArea() < 1000)
+                switch (days)
                 {
-                    switch (days)
-                    {
-                        case 3:
-                            this.addCost = 60;
-                            break;
-                        case 5:
-                            this.addCost = 40;
-                            break;
-                        case 7:
-                            this.addCost = 30;
-                            break;
-                    }
+                    case 3:
+                        this.addCost = 60;
+                        break;
+                    case 5:
+                        this.addCost = 40;
+                        break;
+                    case 7:
+                        this.addCost = 30;
+                        break;
                 }
-                else if (calculateArea() > 999 && calculateArea() < 2001)
+            }
+            else if (calculateArea() > 999 && calculateArea() < 2001)
+            {
+                switch (days)
                 {
-                    switch (days)
-                    {
-                        case 3:
-                            this.addCost = 70;
-                            break;
-                        case 5:
-                            this.addCost = 50;
-                            break;
-                        case 7:
-                            this.addCost = 35;
-                            break;
-                    }
+                    case 3:
+                        this.addCost = 70;
+                        break;
+                    case 5:
+                        this.addCost = 50;
+                        break;
+                    case 7:
+                        this.addCost = 35;
+                        break;
                 }
-                else if (calculateArea() > 2000)
+            }
+            else if (calculateArea() > 2000)
+            {
+                switch (days)
                 {
-                    switch (days)
-                    {
-                        case 3:
-                            this.addCost = 80;
-                            break;
-                        case 5:
-                            this.addCost = 60;
-                            break;
-                        case 7:
-                            this.addCost = 40;
-                            break;
-                    }
+                    case 3:
+                        this.addCost = 80;
+                        break;
+                    case 5:
+                        this.addCost = 60;
+                        break;
+                    case 7:
+                        this.addCost = 40;
+                        break;
                 }
             }
         }
