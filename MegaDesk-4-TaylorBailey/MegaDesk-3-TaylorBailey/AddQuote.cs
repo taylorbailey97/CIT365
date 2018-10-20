@@ -48,6 +48,8 @@ namespace MegaDesk_3_TaylorBailey
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
+            #region ValidationForAddQuote
+
             if (widthUpDown.Value < MIN_WIDTH || widthUpDown.Value > MAX_WIDTH)
             {
                 MessageBox.Show("Please enter a value for desk width between 24 and 96");
@@ -70,11 +72,11 @@ namespace MegaDesk_3_TaylorBailey
             {
                 MessageBox.Show("Please select rush preferences");
             }
-            else if (custName.ToString() != String.Empty)
+            else if (custName.Text == String.Empty)
             {
                 MessageBox.Show("Please enter a name for the customer");
             }
-
+            #endregion
             else
             {
                 if (desk != null)
@@ -92,12 +94,13 @@ namespace MegaDesk_3_TaylorBailey
                         desk.setDays(3);
                     }
 
-                    desk.setDrawers((int) drawers.Value);
-                    desk.setDepth((int) depthUpDown.Value);
-                    desk.setWidth((int) widthUpDown.Value);
+                    desk.setDrawers((int)drawers.Value);
+                    desk.setDepth((int)depthUpDown.Value);
+                    desk.setWidth((int)widthUpDown.Value);
                     desk.setMaterial((Materials)materialBox.SelectedValue);
 
-                    DeskQuote newQuote = new DeskQuote(this.desk);
+                    DeskQuote newQuote = new DeskQuote(this.desk, custName.Text);
+                    newQuote.saveQuote();
                     DisplayQuote newDisplayQuote = new DisplayQuote(this, main, newQuote);
                     newDisplayQuote.Tag = this;
                     newDisplayQuote.Show(this);

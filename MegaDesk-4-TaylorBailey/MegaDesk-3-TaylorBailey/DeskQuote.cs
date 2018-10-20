@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +14,7 @@ namespace MegaDesk_3_TaylorBailey
     {
         private string custName;
         private Desk desk;
+        private static int costPerSqIn = 1;
         private double cost, addCost, total;
         private DateTime created = DateTime.Now;
 
@@ -22,6 +27,9 @@ namespace MegaDesk_3_TaylorBailey
         {
             this.desk = desk;
             this.custName = name;
+            calculateCost();
+            calculateAddedCost(desk.getDays());
+            calculateTotal();
         }
 
         public Desk getDesk()
@@ -29,6 +37,7 @@ namespace MegaDesk_3_TaylorBailey
             return this.desk;
         }
 
+        #region DeskQuoteGetters     
         public double getCost()
         {
             return this.cost;
@@ -44,6 +53,20 @@ namespace MegaDesk_3_TaylorBailey
             return this.total;
         }
 
+        public string getName()
+        {
+            return this.custName;
+        }
+
+        public DateTime getDate()
+        {
+            return this.created;
+        }
+
+        #endregion
+
+        #region DeskQuoteSetters
+
         public void setDesk(Desk desk)
         {
             if (desk != null)
@@ -51,6 +74,10 @@ namespace MegaDesk_3_TaylorBailey
                 this.desk = desk;
             }
         }
+
+        #endregion
+
+        #region DeskQuoteCalculations
 
         public int calculateArea()
         {
@@ -60,7 +87,7 @@ namespace MegaDesk_3_TaylorBailey
 
         public void calculateCost()
         {
-            this.cost = calculateArea();
+            this.cost = calculateArea() * costPerSqIn;
         }
 
         public void calculateAddedCost(int days)
@@ -116,6 +143,33 @@ namespace MegaDesk_3_TaylorBailey
         {
             this.total = this.addCost + this.cost;
         }
+        #endregion
 
+        #region FileStream
+
+        public void saveQuote()
+        {
+            string fileName = @"C:\Users\taylo\source\repos\MegaDesk-4-TaylorBailey\quotes.txt";
+            if (!File.Exists(fileName))
+            {
+                using (StreamWriter sw = File.CreateText(fileName))
+                {
+                    sw.WriteLine(custName + "," + created + "," + desk.getWidth() + "," + desk.getDepth() + "," + (int)desk.GetMaterials() +  "," + desk.getDrawers() + "," + total);
+                    sw.Close();
+                }
+            }
+            else
+            {
+                using (StreamWriter sw = File.AppendText(fileName))
+                {
+                    sw.WriteLine(custName + "," + created + "," + desk.getWidth() + "," + desk.getDepth() + "," +
+                                 (int) desk.GetMaterials() + "," + desk.getDrawers() + "," + total);
+                    sw.Close();
+                }
+            }
+            
+        }
+
+        #endregion
     }
 }

@@ -29,12 +29,32 @@ namespace MegaDesk_3_TaylorBailey
 
         private void formStart()
         {
-            widthLabel.Text = quote.getDesk().getWidth().ToString();
-            updateCosts();
-        }
+            dateLabel.Text = quote.getDate().ToString("D");
+            nameLabel.Text = quote.getName();            
+            widthLabel.Text = quote.getDesk().getWidth().ToString();            
+            depthLabel.Text = quote.getDesk().getDepth().ToString();
+            drawerLabel.Text = quote.getDesk().getDrawers().ToString();
+            switch ((int)quote.getDesk().GetMaterials())
+            {
+                case 200:
+                    materialsLabel.Text = "Oak";
+                    break;
+                case 100:
+                    materialsLabel.Text = "Laminate";
+                    break;
+                case 50:
+                    materialsLabel.Text = "Pine";
+                    break;
+                case 300:
+                    materialsLabel.Text = "Rosewood";
+                    break;
+                case 125:
+                    materialsLabel.Text = "Veneer";
+                    break;
+                default:
+                    break;
+            }
 
-        public void updateCosts()
-        {
             costLabel.Text = quote.getCost().ToString();
             addedCostLabel.Text = quote.getAddCost().ToString();
             totalLabel.Text = quote.getTotal().ToString();
@@ -47,6 +67,13 @@ namespace MegaDesk_3_TaylorBailey
             {
                 addForm.Show();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            addForm.Show();
+            backedOut = true;
+            this.Close();
         }
     }
 }

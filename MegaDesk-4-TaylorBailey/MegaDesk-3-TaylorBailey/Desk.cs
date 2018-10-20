@@ -24,14 +24,11 @@ namespace MegaDesk_3_TaylorBailey
 
         public Desk()
         {
-            days = 0;
-            width = 0;
-            depth = 0;
-            drawer = 0;
             materials = Materials.Select;
         }
 
-
+        #region DeskSetters
+                
         public void setDrawers(int drawers)
         {
             this.drawer = drawers;
@@ -49,20 +46,18 @@ namespace MegaDesk_3_TaylorBailey
 
         public void setWidth(int width)
         {
-            if (width > 0 && width < 100)
-            {
-                this.width = width;
-            }
+            this.width = width;
         }
 
         public void setDepth(int depth)
         {
-            if (depth > 0 && depth < 25)
-            {
-                this.depth = depth;
-            }
+            this.depth = depth;
         }
 
+        #endregion
+
+        #region DeskGetters
+        
         public int getDepth()
         {
             return this.depth;
@@ -77,5 +72,16 @@ namespace MegaDesk_3_TaylorBailey
         {
             return this.days;
         }
-}
+
+        public int getDrawers()
+        {
+            return this.drawer;
+        }
+
+        public Materials GetMaterials()
+        {
+            return this.materials;
+        }
+        #endregion
+    }
 }

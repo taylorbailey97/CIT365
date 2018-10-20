@@ -58,7 +58,7 @@
             this.CancelButton.Location = new System.Drawing.Point(12, 226);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 23);
-            this.CancelButton.TabIndex = 0;
+            this.CancelButton.TabIndex = 6;
             this.CancelButton.Text = "&Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -101,14 +101,14 @@
             this.widthUpDown.Location = new System.Drawing.Point(170, 38);
             this.widthUpDown.Name = "widthUpDown";
             this.widthUpDown.Size = new System.Drawing.Size(148, 20);
-            this.widthUpDown.TabIndex = 15;
+            this.widthUpDown.TabIndex = 2;
             // 
             // depthUpDown
             // 
             this.depthUpDown.Location = new System.Drawing.Point(170, 63);
             this.depthUpDown.Name = "depthUpDown";
             this.depthUpDown.Size = new System.Drawing.Size(148, 20);
-            this.depthUpDown.TabIndex = 19;
+            this.depthUpDown.TabIndex = 3;
             // 
             // label7
             // 
@@ -139,7 +139,7 @@
             this.SubmitButton.Location = new System.Drawing.Point(297, 226);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
-            this.SubmitButton.TabIndex = 20;
+            this.SubmitButton.TabIndex = 7;
             this.SubmitButton.Text = "&Get Quote";
             this.SubmitButton.UseVisualStyleBackColor = false;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
@@ -154,7 +154,7 @@
             0});
             this.drawers.Name = "drawers";
             this.drawers.Size = new System.Drawing.Size(94, 20);
-            this.drawers.TabIndex = 21;
+            this.drawers.TabIndex = 4;
             // 
             // label6
             // 
@@ -172,7 +172,7 @@
             this.materialBox.Location = new System.Drawing.Point(84, 111);
             this.materialBox.Name = "materialBox";
             this.materialBox.Size = new System.Drawing.Size(234, 21);
-            this.materialBox.TabIndex = 22;
+            this.materialBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -190,7 +190,7 @@
             this.custName.Location = new System.Drawing.Point(170, 12);
             this.custName.Name = "custName";
             this.custName.Size = new System.Drawing.Size(148, 20);
-            this.custName.TabIndex = 24;
+            this.custName.TabIndex = 1;
             // 
             // rush3
             // 
