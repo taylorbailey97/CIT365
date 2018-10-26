@@ -1,0 +1,1 @@
+C:\Users\taylo\OneDrive\Documents\GitHub\Windows-appsample-photo-lab\xaml-basics-starting-points\adaptive-layout\PhotoLab\PhotoLab.csproj;x86
