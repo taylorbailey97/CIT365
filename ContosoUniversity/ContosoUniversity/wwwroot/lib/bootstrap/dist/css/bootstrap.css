@@ -12,6 +12,9 @@ html {
 body {
   margin: 0;
 }
+.img1 {
+    text-align: center;
+}
 article,
 aside,
 details,
@@ -84,7 +87,8 @@ sub {
   bottom: -.25em;
 }
 img {
-  border: 0;
+  margin: 0 auto;
+  max-width: 80%;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -226,7 +230,7 @@ th {
     page-break-inside: avoid;
   }
   img {
-    max-width: 100% !important;
+    max-width: 100%;
   }
   p,
   h2,
